@@ -1,0 +1,77 @@
+<div class="contPrincipal">
+    <div class="plantilla">
+        <div class="image">
+            <img src="../../Media/Profesores/ProfesorPrueb.jpg" alt="Foto perfil">
+        </div>
+        <div class="contenido">
+            <div class="nombre">
+                <h3>Hola mi nombre es: Juan</h3>
+            </div>
+            <div class="info">
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="boton">
+                <input type="button" value="Más sobre mí" >
+            </div>
+
+        </div>
+        
+
+    </div>
+</div>
+<style>
+    .plantilla{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        gap:20px;
+        padding: 20px;
+        border-radius: 20px;
+        height: auto;
+        background-color: rgb(215, 159, 6);
+    }
+    img{
+        padding: 20px;
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        
+    }
+    .contenido{
+        display: flex;
+        flex-direction: column; /* Elementos en columna */
+        justify-content: center;
+    }
+    .nombre {
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-size: 1.2em;
+    font-weight: bold;
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+
+    .boton {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boton input{
+        background-color: rgb(17, 17, 76);
+        border: none;
+        padding: 8px 15px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        align-self: center;
+    }
+    .boton input:hover{
+        background-color: white;
+        color:blue;
+    }
+
+</style>
