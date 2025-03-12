@@ -1,0 +1,63 @@
+<style>
+    .formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario input, 
+.formulario textarea, 
+.formulario select, 
+.formulario button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 80px;
+}
+
+.formulario button {
+    background-color: rgb(215, 159, 6);
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<form class="formulario" action="#" method="POST">
+<h2>Contacto</h2>
+<input type="text" name="nombre" placeholder="Nombre" required>
+<input type="email" name="correo" placeholder="Correo Electrónico" required>
+<select name="grado">
+    <option value="" disabled selected>Selecciona tu grado de estudio</option>
+    <option value="Primaria">Primaria</option>
+    <option value="Secundaria">Secundaria</option>
+    <option value="Preparatoria">Preparatoria</option>
+    <option value="Universidad">Universidad</option>
+    
+</select>
+<textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+<button type="submit">Enviar</button>
+</form>
