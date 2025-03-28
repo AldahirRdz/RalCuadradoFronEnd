@@ -7,6 +7,11 @@
         </div>
         <div class="primaria">
             <h2>Primaria</h2>
+            <div class="info">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
             
         </div>
         <div class="Secundaria">
@@ -19,6 +24,11 @@
         </div>
         <div class="preparatoria">
             <h2>Preparatoria</h2>
+            <div class="info">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -49,44 +59,51 @@
         text-align: center;
     }
 
-    .primaria, .Secundaria, .preparatoria{
-        width: 40%;
-        background-color: rgb(215, 159, 6);
-        padding: 30px;
-        margin: 30px;
-        text-align: center;
-        border-radius: 20px;
-        color: dark;
-        font-size: 2rem;
-    }
-    .primaria{
-        order: 1;
-    }
-    .Secundaria{
-        order: 2;
-        height: 100px;
-        align-self: flex-end;
-        transition: all 0.5s ease-in-out
-    }
-    .Secundaria:hover {
-        width: 90%;
-        height: auto;
-    }
-    .Secundaria:hover h2 {
-        display: none;
-        
-    }
-    .Secundaria .info{
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-    .Secundaria:hover .info{
-        opacity: 1;
-        font-size: 1rem;
-        text-align: left;
-    }
-    .preparatoria{
-        order: 3;
-    }
+    .primaria, .Secundaria, .preparatoria {
+    width: 40%;
+    background-color: rgb(215, 159, 6);
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 20px;
+    height: 100px;
+    color: dark;
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out; /* Transición común para todas */
+}
+
+.primaria {
+    order: 1;
+}
+
+.Secundaria {
+    order: 2;
+    align-self: flex-end;
+}
+
+.preparatoria {
+    order: 3;
+}
+
+.primaria:hover, .Secundaria:hover, .preparatoria:hover {
+    width: 90%;
+    height: auto;
+}
+
+.primaria:hover h2, .Secundaria:hover h2, .preparatoria:hover h2 {
+    display: none;
+}
+
+.primaria .info, .Secundaria .info, .preparatoria .info {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.primaria:hover .info, .Secundaria:hover .info, .preparatoria:hover .info {
+    opacity: 1;
+    font-size: 1rem;
+    text-align: left;
+}
+
 
 </style>
