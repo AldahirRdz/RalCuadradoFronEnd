@@ -1,50 +1,53 @@
 <div class="contPrin">
-    <div class="secciones">
-        <div class="bienvenida">
-            <h1>Bienvenidos a R²</h1>
-            <p>La educación no es un problema, la educación es una oportunidad  </br> </p>
-            <p1> Somos especialistas en asesorias particulares en temas de regularización y capacitación para los niveles: </p1>
+    <div class="secciones"> 
+        <div class="subseccion">
 
+            <div class="bienvenida">
+                <h1>En R² te ofrecemos </h1>
+                
+             </div>
+    
+    
             
+    
+            <div class="primaria">
+                <h2>Primaria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                
+            </div>
+            <div class="Secundaria">
+                <h2>Secundaria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+            <div class="preparatoria">
+                <h2>Preparatoria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </div>  
+
         </div>
 
-
-        
-
-        <div class="primaria">
-            <h2>Primaria</h2>
-            <div class="info">
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-            </div>
-            
-        </div>
-        <div class="Secundaria">
-            <h2>Secundaria</h2>
-            <div class="info">
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-            </div>
-        </div>
-        <div class="preparatoria">
-            <h2>Preparatoria</h2>
-            <div class="info">
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-            </div>
-        </div>
     </div>
 </div>
+
 
 <style>
     .contPrin {
     width: 100%;
     min-height: 110vh;
-    background: linear-gradient(rgba(73, 73, 73, 0.5), rgba(248, 247, 247, 0.5)), 
-                url('../../Media/salon.webp');
+    /*background: linear-gradient(rgba(73, 73, 73, 0.5), rgba(248, 247, 247, 0.5)), 
+                url('../../Media/salon.webp');*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,23 +57,28 @@
         flex-direction: column;
     }
 
+    .subseccion{
+        display:flex;
+        flex-direction: column;
+    }
+
     .bienvenida h1{
         font-size: 4rem;
         font-weight: bold;
         color: #000000;
-        text-align: center;
+        text-align: left;
     }
     p{
         font-size: 20px;
         font-weight: bold;
         text-align: center;
-        color: white;
+        color: black;
     }
 
     p1{
         font-size: 20px;
         font-weight: bold;
-        color: white;
+        color: black;
     }
 
     .primaria, .Secundaria, .preparatoria {
@@ -92,7 +100,7 @@
 
 .Secundaria {
     order: 2;
-    align-self: flex-end;
+    /*align-self: flex-end;*/
 }
 
 .preparatoria {
