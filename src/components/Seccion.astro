@@ -1,0 +1,131 @@
+<div class="contPrin">
+    <div class="secciones"> 
+        <div class="subseccion">
+
+            <div class="bienvenida">
+                <h1>En R² te ofrecemos </h1>
+                
+             </div>
+    
+    
+            
+    
+            <div class="primaria">
+                <h2>Primaria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                
+            </div>
+            <div class="Secundaria">
+                <h2>Secundaria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+            <div class="preparatoria">
+                <h2>Preparatoria</h2>
+                <div class="info">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </div>  
+
+        </div>
+
+    </div>
+</div>
+
+
+<style>
+    .contPrin {
+    width: 100%;
+    min-height: 110vh;
+    /*background: linear-gradient(rgba(73, 73, 73, 0.5), rgba(248, 247, 247, 0.5)), 
+                url('../../Media/salon.webp');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    .secciones{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subseccion{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .bienvenida h1{
+        font-size: 4rem;
+        font-weight: bold;
+        color: #000000;
+        text-align: left;
+    }
+    p{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    p1{
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .primaria, .Secundaria, .preparatoria {
+    width: 40%;
+    background-color: rgb(215, 159, 6);
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 20px;
+    height: 100px;
+    color: dark;
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out; /* Transición común para todas */
+}
+
+.primaria {
+    order: 1;
+}
+
+.Secundaria {
+    order: 2;
+    /*align-self: flex-end;*/
+}
+
+.preparatoria {
+    order: 3;
+}
+
+.primaria:hover, .Secundaria:hover, .preparatoria:hover {
+    width: 90%;
+    height: auto;
+}
+
+.primaria:hover h2, .Secundaria:hover h2, .preparatoria:hover h2 {
+    display: none;
+}
+
+.primaria .info, .Secundaria .info, .preparatoria .info {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.primaria:hover .info, .Secundaria:hover .info, .preparatoria:hover .info {
+    opacity: 1;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+</style>
