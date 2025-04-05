@@ -1,7 +1,11 @@
 <div class="contPrincipal">
     <div class="plantilla">
-        <div class="image">
-            <img src="../../Media/asesor.png" alt="Foto perfil">
+        <div class="image-carousel">
+            <div class="carousel-track">
+                <img src="../../Media/asesor.png" alt="Asesor 1" />
+                <img src="../../Media/asesora.png" alt="Asesor 2" />
+                <img src="../../Media/aula.jpg" alt="Asesor 3" />
+            </div>
         </div>
         <div class="contenido">
             <div class="nombre">
@@ -9,7 +13,6 @@
             </div>
             <div class="info">
                 <p> Somos una organización especializada en la enseñanza de matemáticas, física y química, desde nivel básico hasta nivel superior.  </p>
-
                 <p> Nuestro equipo de trabajo se conforma por ingenieros y físicos. Los cuales aparte de ser especialistas en sus respectivas 
                     áreas de concentración, están altamente calificados para llevarte de la mano, siempre pensando en la necesidad de cada 
                     alumno y poder brindar un conocimiento con bases sólidas. </p>
@@ -23,33 +26,56 @@
             </div>
 
         </div>
-
-    <div class="plantilla">
-
-    </div>
-
-
     </div>
 </div>
 <style>
     .plantilla{
         width: 90%;
-        display: flex;
+        display: grid;
         align-items: center;
         margin: 70px;
+        grid-template-columns: repeat(2, 1fr);
         gap:20px;
         padding: 20px;
         border-radius: 20px;
         height: auto;
         background-color: rgb(215, 159, 6);
     }
-    img{
-        padding: 20px;
-        width: 2000px;
-        height: auto;
-        border-radius: 10px;
-        
-    }
+    .image-carousel {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    animation: slide 9s infinite ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animación: cambia cada 3s entre 3 imágenes */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+
+    36% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+
+    69% { transform: translateX(-200%); }
+    99% { transform: translateX(-200%); }
+
+    100% { transform: translateX(0); }
+}
+
     .contenido{
         display: flex;
         flex-direction: column; /* Elementos en columna */
