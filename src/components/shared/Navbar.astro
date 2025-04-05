@@ -23,7 +23,7 @@
                     Contacto
                    </a>
                </nav>
-               <button class="flex flex-col ml-4 lg:hidden">
+               <button class="flex flex-col ml-4 lg:hidden" id="menu-toggle">
                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
                    </span>
                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
@@ -35,3 +35,15 @@
        </div>
    </header>
 <div/>
+<script>
+    // Seleccionamos el botón y el menú
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    // Añadimos el evento de clic al botón
+    menuToggle.addEventListener('click', () => {
+        // Alternamos la visibilidad del nav
+        navbar.classList.toggle('hidden');
+    });
+</script>
+
