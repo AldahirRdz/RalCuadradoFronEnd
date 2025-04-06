@@ -7,8 +7,17 @@ import Footer from '../components/shared/footer.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+
+<style>
+    /* Cuando el menú está abierto, ajustamos el margen del contenido */
+    body.menu-open .content {
+        margin-top: 50%; /* Ajusta el margen según la altura del menú */
+    }
+</style>
 <Layout>
 	<Navbar />
-	<Welcome />
+	<div class="content">
+        <Welcome />
+    </div>
 	<Footer/>
 </Layout>

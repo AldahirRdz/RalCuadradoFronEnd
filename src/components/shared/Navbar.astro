@@ -1,49 +1,53 @@
-<div class=" bg-yellow-500 dark:bg-yellow-500">
-   <header class="z-30 flex items-center w-full h-24 sm:h-32">
-       <div class="container flex items-center justify-between px-6 mx-auto">
-           <div class="text-3xl font-black text-gray-800 dark:text-dark">
-               <img src="/Media/logo.png" alt="Logo" class="h-20 w-20 rounded-full mr-2">
-            
-           </div>
-           <div class="flex items-center">
-               <nav class="items-center hidden text-lg text-gray-800 font-sen dark:text-withe lg:flex">
-                   <a href="/" class="flex px-6 py-2 hover:underline">
-                    Inicio
-                   </a>
-                   <a href="./AcercaDe#" class="flex px-6 py-2 hover:underline">
-                    Acerca de
-                   </a>
-                   <a href="./misProfesores" class="flex px-6 py-2 hover:underline">
-                    Mis Profesores
-                   </a>
-                   <a href="./MisServicios" class="flex px-6 py-2 hover:underline">
-                    Mis Servicios
-                   </a>
-                   <a href="./contacto" class="flex px-6 py-2 hover:underline">
-                    Contacto
-                   </a>
-               </nav>
-               <button class="flex flex-col ml-4 lg:hidden" id="menu-toggle">
-                   <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                   </span>
-                   <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                   </span>
-                   <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                   </span>
-               </button>
-           </div>
-       </div>
-   </header>
-<div/>
-<script>
-    // Seleccionamos el botón y el menú
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
+---
+/* El código de la función de navegación y el menú hamburguesa */
+---
+<script type="module">
+    // Espera hasta que el documento esté completamente cargado
+    document.addEventListener('DOMContentLoaded', () => {
+        // Seleccionar los elementos relevantes
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    // Añadimos el evento de clic al botón
-    menuToggle.addEventListener('click', () => {
-        // Alternamos la visibilidad del nav
-        navbar.classList.toggle('hidden');
+        // Añadir el evento click al botón de menú
+        menuToggle.addEventListener('click', () => {
+            // Alternamos la visibilidad del menú móvil
+            mobileMenu.classList.toggle('hidden');
+            navbar.classList.toggle('hidden'); // También puedes ocultar el navbar si lo deseas
+            document.body.classList.toggle('menu-open'); // Activar el margen superior en el contenido
+        });
     });
 </script>
 
+<div class="bg-yellow-500 dark:bg-yellow-500">
+    <header class="z-30 flex items-center w-full h-24 sm:h-32 relative">
+        <div class="container flex items-center justify-between px-6 mx-auto">
+            <div class="text-3xl font-black text-gray-800 dark:text-dark">
+                <img src="/Media/logo.png" alt="Logo" class="h-20 w-20 rounded-full mr-2">
+            </div>
+            <div class="flex items-center relative">
+                <nav id="navbar" class="items-center hidden text-lg text-gray-800 font-sen dark:text-white lg:flex">
+                    <a href="/" class="flex px-6 py-2 hover:underline">Inicio</a>
+                    <a href="./AcercaDe#" class="flex px-6 py-2 hover:underline">Acerca de</a>
+                    <a href="./misProfesores" class="flex px-6 py-2 hover:underline">Mis Profesores</a>
+                    <a href="./MisServicios" class="flex px-6 py-2 hover:underline">Mis Servicios</a>
+                    <a href="./contacto" class="flex px-6 py-2 hover:underline">Contacto</a>
+                </nav>
+                <button class="flex flex-col ml-4 lg:hidden z-40" id="menu-toggle">
+                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white transition-colors duration-300" id="bar-1"></span>
+                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white transition-colors duration-300" id="bar-2"></span>
+                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white transition-colors duration-300" id="bar-3"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-90 text-white hidden flex flex-col justify-start items-center lg:hidden" style="width: 100%; height: 30%; top: 0; left: 0; z-index: 30;">
+        <nav class="text-lg flex flex-col w-full justify-around items-center h-full">
+            <a href="/" class="px-6 py-2 hover:underline">Inicio</a>
+            <a href="./AcercaDe#" class="px-6 py-2 hover:underline">Acerca de</a>
+            <a href="./misProfesores" class="px-6 py-2 hover:underline">Mis Profesores</a>
+            <a href="./MisServicios" class="px-6 py-2 hover:underline">Mis Servicios</a>
+            <a href="./contacto" class="px-6 py-2 hover:underline">Contacto</a>
+        </nav>
+    </div>
+</div>
