@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root{
-    --color-primario: rgb(215, 159, 6);
-    --color-boton: rgb(17, 17, 76);
-    --color-fondo: #fff;
+    --gray-light: 0, 0, 0;
+    --gray-gradient: rgba(var(--gray-light), 80%),  #edae0eca ;
+    --color-boton: rgb(18, 18, 172);
+    --color-fondo: #4e3939;
+    
+
+
 }
 html{
     box-sizing: border-box;
@@ -18,4 +22,7 @@ html{
     margin: 0;
     padding: 0;
 }
-  
+
+.bg-gradient-gray {
+    background: linear-gradient(var(--gray-gradient));
+}
