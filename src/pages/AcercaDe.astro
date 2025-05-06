@@ -4,18 +4,57 @@ import Navbar from '../components/shared/Navbar.astro';
 import Footer from '../components/shared/footer.astro';
 import Conocenos from '../components/Conocenos.astro';
 import Historia from '../components/Historia.astro';
-import Mision from '../components/Mision.astro';
-import Vision from '../components/Vision.astro';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
+<style>
+    /* Cuando el menú está abierto, ajustamos el margen del contenido */
+    body.menu-open .content {
+        margin-top: 40%; /* Ajusta el margen según la altura del menú */
+    }
+</style>
 <Layout>
 	<Navbar />
-	<Conocenos />
-	<Historia />
-	<Mision />
-	<Vision />
+	<div class="content">
+
+		<Conocenos />
+		<Historia
+		titulo="Nuestra historia"
+		imagen="../../Media/historia.png"
+		alt="Foto perfil"
+		botonTexto="Más sobre nosotros"
+		parrafos={[
+			"La idea de R2 surge en 2019 por la necesidad de una educación empática orientada a las ciencias básicas.",
+			"En México hay mucha aversión a las matemáticas, física o química por parte de los alumnos...",
+			"Algo curioso es que nuestro nombre y logo, más allá de ser una potencia, representa la unión de una pareja...",
+			"Fue así, que con mucho amor y pasión por las matemáticas se funda R²."
+		]}	
+		/>
+		<Historia
+		titulo="Misión"
+		imagen="../../Media/asesora.png"
+		alt="Foto perfil"
+		botonTexto="Más sobre nosotros"
+		parrafos={[
+			"Cambiar el concepto y aversión que se tiene en México al estudio de las ciencias básicas e ingenierías.",
+			"Sembramos y fomentamos la curiosidad en los más jóvenes, dándoles bases y conocimientos solidos para que",
+			"cada vez sean más los futuros científicos y científicas en el país." 
+		]}	
+		/>
+		<Historia
+		titulo="Vision"
+		imagen="../../Media/vision.png"
+		alt="Foto perfil"
+		botonTexto="Más sobre nosotros"
+		parrafos={[
+			"Cambiar el concepto y aversión que se tiene en México al estudio de las ciencias básicas e ingenierías.",
+            "Sembramos y fomentamos la curiosidad en los más jóvenes, dándoles bases y conocimientos solidos para que ",
+            "cada vez sean más los futuros científicos y científicas en el país.",
+			"Fue así, que con mucho amor y pasión por las matemáticas se funda R²."
+		]}	
+		/>
+	</div>
 	<Footer/>
 </Layout>

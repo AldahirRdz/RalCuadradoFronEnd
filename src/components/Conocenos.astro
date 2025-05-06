@@ -40,6 +40,7 @@
         border-radius: 2rem;
         height: auto;
         background-color: var(--color-primario);
+        
     }
     .image-carousel {
     width: 100%;
@@ -98,11 +99,11 @@
     }
 
     .boton input{
-        background-color: var(--color-boton);
+        background-color: var(--color-fondo);
         border: none;
         padding: .8rem 1.5rem;
         border-radius: 3rem;
-        color: var(--color-fondo);
+        color: var(--color-boton);
         cursor: pointer;
         align-self: center;
     }
@@ -112,4 +113,11 @@
         font-weight: bold;
     }
 
+    @media (max-width: 768px)  {
+        .plantilla{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+    }
 </style>
