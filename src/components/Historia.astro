@@ -13,7 +13,8 @@ const { titulo, parrafos, imagen, alt, botonTexto } = Astro.props;
         <h1>{titulo}</h1>
         </div>
         <div class="info">
-        {parrafos.map( (parrafo : string) => <p>{parrafo}</p>)}
+        {Array.isArray(parrafos) && parrafos.map((parrafo) => <p>{parrafo}</p>)}
+
         </div>
         <div class="boton">
         <input type="button" value={botonTexto} />
