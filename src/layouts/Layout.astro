@@ -1,17 +1,17 @@
----
-	import './src/styles/global.css' 
----
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>RalCuadrado</title>
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</head>
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>RalCuadrado</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <body>
+    <slot />
+  </body>
 </html>
 
