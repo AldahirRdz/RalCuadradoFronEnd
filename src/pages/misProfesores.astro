@@ -1,22 +1,40 @@
 ---
 import PlantillaProfesor from '../components/PlantillaProfesor.astro';
-import PlantillaRubi from '../components/PlantillaRubi.astro';
-import PlantillaMauricio from '../components/PlantillaMauricio.astro';
-import PlantillaCesar from '../components/PlantillaCesar.astro';
+
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/shared/Navbar.astro';
 import Footer from '../components/shared/footer.astro';
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
 
+---
 <Layout>
 	<Navbar />
-	<PlantillaProfesor/>
-	<PlantillaRubi/>
-	<PlantillaMauricio/>
-	<PlantillaCesar/>
-	<Footer/>
+	<div class="contPrincipal">
+		<PlantillaProfesor
+			nombre="Rafael Alvarado Salazar"
+			descripcion="Soy Ingeniero en energía, egresado de la UAM."
+			detalles="Tengo más de 7 años de experiencia enseñando matemáticas y física a todos los niveles, desde primaria hasta universidad. Fuera del salón de clases soy un atleta de alto rendimiento..."
+			imagen="../../Media/Profesores/(1)rsa.jpg"/>
+		
+		<PlantillaProfesor
+			nombre="Rubí Aviles"
+			descripcion="Soy egresada de la Universidad Autónoma Metropolitana, de la licenciatura de Física."
+			detalles="Tengo más de 7 años dedicando mi vida a la enseñanza de matemáticas y física. Esta experiencia me ha enseñado que cada alumno tiene aprendizaje y talentos distintos..."
+			imagen="../../Media/Profesores/Rubí.png"/>
+
+
+		<PlantillaProfesor
+			nombre="Hola mi nombre es Cesar"
+			descripcion="tengo 25 años y actualmente estoy haciendo mi maestría en la ciencia de los nanomateriales y también estoy enseñando y compartiendo mis conocimientos de matemáticas, física y química a chicos y chicas de nivel básico hasta licenciatura."
+			detalles="Me ajusto a la forma y ritmo de aprendizaje de cada alumno ayudándolo de primera mano a entender los temas y aplicarlos."
+			imagen="../../Media/Profesores/Cesar.jpg"/>
+
+		<PlantillaProfesor
+			nombre="Hola mi nombre es: Mauricio Vázquez"
+			descripcion="Soy Ingeniero en Energía con enfoque en Plantas Térmicas y el Impacto Ambiental."
+			detalles="Soy una persona con gusto por el baloncesto, el turismo, la naturaleza, la musica y el tiempo con los amigos haciendo actividades recreativas como ir al cine o bailar."
+			imagen="../../Media/Profesores/MVR.png"/>
+	</div>
+	<Footer />
 
 </Layout>
 

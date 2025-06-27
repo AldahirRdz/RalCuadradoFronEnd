@@ -1,90 +1,92 @@
-<div class="contPrincipal">
-    <div class="plantilla">
-        <div class="image">
-            <img src="../../Media/Profesores/(1)rsa.jpg" alt="Foto perfil">
-        </div>
-        <div class="contenido">
-            <div class="nombre">
-                <h3>Hola mi nombre es: Rafael Alvarado Salazar </h3>
-            </div>
-            <div class="info">
-                <p>Soy Ingeniero en energía, egresado de la UAM. </p>
+---
+// src/components/PlantillaProfesor.astro
+const { nombre, descripcion, detalles, imagen } = Astro.props;
+//plantilla global para todos los profesores
+---
 
-                <p> Tengo más de 7 años de experiencia enseñando matemáticas y física a todos los niveles, desde primaria hasta universidad.
-                    Fuera del salón de clases soy un atleta de alto rendimiento. Siendo representante del equipo municipal de natación.
-                    El deporte y mi formación académica me enseñaron que no hay formula para el aprendizaje. Cada quien tiene su ritmo, sus propias habilidades y debilidades. 
-                    Mi metodología se centra en sembrar bases fuertes y fomentar seguridad en todos mi alumnos.</p>
-            </div>
-            <div class="boton">
-                <input type="button" value="Más sobre mí" >
-            </div>
+
+<div class="plantilla">
+    <div class="image">
+        <img src={imagen} alt={`Foto de ${nombre}`} />
+    </div>
+    <div class="contenido">
+        <div class="nombre">
+        <h3>Hola, mi nombre es {nombre}</h3>
+        </div>
+        <div class="info">
+        <p>{descripcion}</p>
+        <p>{detalles}</p>
+        </div>
+        <div class="boton">
+        <input type="button" value="Más sobre mí">
         </div>
     </div>
 </div>
-<style>
-    .plantilla{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        gap:20px;
-        padding: 20px;
-        border-radius: 20px;
-        margin-top: 20px;
-        height: auto;
-        background-color: rgb(215, 159, 6);
-    }
-    img{
-        padding: 20px;
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        
-    }
 
-    .contenido{
-        display: flex;
-        flex-direction: column; /* Elementos en columna */
-        justify-content: center;
-    }
-    .nombre {
-    text-align: left; /* Alinear el texto a la izquierda */
+<style>
+.plantilla {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: auto;
+    background-color: rgb(215, 159, 6);
+}
+img {
+    padding: 2rem;
+    width: 100%;
+    height: 50rem;
+    /*object-fit: contain;*/
+    border-radius: 1rem;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nombre {
+    text-align: left;
     font-size: 1.2em;
     font-weight: bold;
-    }
+}
+.info {
+    margin-top: 1rem;
+}
+.boton {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.boton input {
+    background-color: rgb(17, 17, 76);
+    border: none;
+    padding: .8rem 1.5rem;
+    border-radius: 3rem;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+}
+.boton input:hover {
+    background-color: white;
+    color: blue;
+}
 
-    .info {
-        margin-top: 10px;
-    }
 
-    .boton {
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .boton input{
-        background-color: rgb(17, 17, 76);
-        border: none;
-        padding: 8px 15px;
-        border-radius: 30px;
-        color: white;
-        cursor: pointer;
-        align-self: center;
-    }
-    .boton input:hover{
-        background-color: white;
-        color:blue;
-    }
 
     /*DISEÑO RESPONSIVO TABLET*/ 
     @media (max-width: 768px)  {
         .plantilla{
             flex-direction: column;
             width: 90%;
+            margin: auto;
             margin-top: 2rem;
-            margin-right: 2rem;
-            margin-left: 2rem;
+            margin-bottom: 2rem;
 
         }
         .image{
@@ -92,10 +94,8 @@
             display: flex;
         }
         img{
-            margin: auto;
             width: 90%;
-            height: 600px;
-            border-radius: 2rem; 
+            height: 400px;
         }
         .nombre {
             text-align: center; /* Alinear el texto a la izquierda */
@@ -111,15 +111,16 @@
     /*DISEÑO RESPONSIVO CELULAR*/ 
     @media (max-width: 390px)  {
         .plantilla{
-            width: 100%;
+            width: 90%;
+            display: flex;
 
         }
         .image{
             width: 90%;
         }
         img{
-            width: 90%;
-            height: 400px;
+            width: 100%;
+            height: 40rem;
             
         }
     }

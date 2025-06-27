@@ -1,59 +1,45 @@
-<div class="contPrincipal">
-    <div class="plantilla">
-        <div class="image">
-            <img src="../../Media/historia.png" alt="Foto perfil">
-        </div>
-        <div class="contenido">
-            <div class="nombre">
-                <h3>Nuestra historia </h3>
-            </div>
-            <div class="info">
-                <p> La idea de R2 surge en 2019 por la necesidad de una educación empática orientada a las ciencias básicas.  </p>
 
-                <p> En México hay mucha aversión a las matemáticas, física o química por parte de los alumnos. 
-                    Esta situación es muy comprensible porque la gran mayoría de profesores de educación publica muestran 
-                    poco interés por sus alumnos y nula pasión por las ciencias; incluso en la educación privada, vivimos 
-                    de primera mano que los alumnos resultan ser más un número en la nómina que un alumno que quiere aprender.  </p>
-                
-                <p> Algo curioso es que nuestro nombre y logo, más allá de ser una potencia, representa la unión de una pareja, Rafael y Rubí. 
-                    Que cansados de esta situación y como estudiantes de ciencias básicas e ingeniería nos dimos a la tarea de formular un 
-                    método de enseñanza poco ortodoxo, pensamos que las matemáticas ya son lo suficientemente difíciles como 
-                    para que las hagan tediosas y aburridas.   </p>
+---
+// src/components/PlantillaGlobal.astro
+const { titulo, parrafos, imagen, alt, botonTexto } = Astro.props;
+---
 
-                <p>
-                    Fue así, que con mucho amor y pasión por las matemáticas se funda R².
-                </p>
-            </div>
-            <div class="boton">
-                <input type="button" value="Más sobre nosotros" >
-            </div>
-
-        </div>
-
-    <div class="plantilla">
-
+<div class="plantilla">
+    <div class="image">
+        <img src={imagen} alt={alt} />
     </div>
+    <div class="contenido">
+        <div class="nombre">
+        <h1>{titulo}</h1>
+        </div>
+        <div class="info">
+        {Array.isArray(parrafos) && parrafos.map((parrafo) => <p>{parrafo}</p>)}
 
-
+        </div>
+        <div class="boton">
+        <input type="button" value={botonTexto} />
+        </div>
     </div>
 </div>
 <style>
     .plantilla{
         width: 90%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        margin: 70px;
-        gap:20px;
-        padding: 20px;
-        border-radius: 20px;
-        height: auto;
-        background-color: rgb(215, 159, 6);
+        margin: auto;
+        height:100%;
+        margin-bottom: 3rem;
+        gap:2rem;
+        padding: 2rem;
+        border-radius: 2rem;
+        background: linear-gradient(var(--gray-gradient));
     }
     img{
-        padding: 20px;
-        width: 2000px;
-        height: auto;
-        border-radius: 10px;
+        padding: 2rem;
+        width: 100%;
+        height: 50rem;
+        border-radius: 1rem;
         
     }
     .contenido{
@@ -63,16 +49,16 @@
     }
     .nombre {
     text-align: left; /* Alinear el texto a la izquierda */
-    font-size: 1.2em;
+    font-size: 3rem;
     font-weight: bold;
     }
 
     .info {
-        margin-top: 10px;
+        margin-top: 1rem;
     }
 
     .boton {
-        margin-top: 15px;
+        margin-top: 1.5rem;
         display: flex;
         justify-content: center;
     }
@@ -80,8 +66,8 @@
     .boton input{
         background-color: rgb(17, 17, 76);
         border: none;
-        padding: 8px 15px;
-        border-radius: 30px;
+        padding: .8rem 1.5rem;
+        border-radius: 3rem;
         color: white;
         cursor: pointer;
         align-self: center;
@@ -90,5 +76,10 @@
         background-color: white;
         color:blue;
     }
-
+    @media (max-width: 390px )  {
+        .plantilla{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 </style>
